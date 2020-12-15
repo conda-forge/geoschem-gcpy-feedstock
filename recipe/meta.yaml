@@ -19,6 +19,7 @@ requirements:
   host:
     - pip
     - python
+    - numpy >=1.19.1
     - cartopy >=0.17.0
   run:
     - cartopy >=0.17.0
