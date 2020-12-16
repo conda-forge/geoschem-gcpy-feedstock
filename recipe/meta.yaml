@@ -19,7 +19,7 @@ requirements:
   host:
     - pip
     - python
-    - numpy >=1.19.1
+    - numpy
     - cartopy >=0.17.0
   run:
     - cartopy >=0.17.0
@@ -30,7 +30,7 @@ requirements:
     - joblib >=0.17.0
     - matplotlib-base >=3.1.1
     - netcdf4 >=1.4.2
-    - numpy >=1.19.1
+    - {{ pin_compatible('numpy') }}
     - pandas >=0.25.1
     - pypdf2 >=1.26.0
     - python
