@@ -11,7 +11,7 @@ source:
   sha256: c73e06ef73f0aeacc8cc092546c3826096fb5a428648db9ff33cc838f603ded4
 
 build:
-  number: 0
+  number: 2
   skip: true  # [win or py<36]
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -19,7 +19,7 @@ requirements:
   host:
     - pip
     - python
-    - numpy 1.19.1
+    - numpy >=1.19.1
     - cartopy >=0.17.0
   run:
     - cartopy >=0.17.0
@@ -46,10 +46,6 @@ requirements:
 test:
   imports:
     - gcpy
-  commands:
-    - pip check
-  requires:
-    - pip
 
 about:
   home: https://github.com/geoschem/gcpy
