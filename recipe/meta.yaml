@@ -46,10 +46,6 @@ requirements:
 test:
   imports:
     - gcpy
-  commands:
-    - pip check
-  requires:
-    - pip
 
 about:
   home: https://github.com/geoschem/gcpy
