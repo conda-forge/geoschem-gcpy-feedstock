@@ -1,5 +1,5 @@
 {% set name = "geoschem-gcpy" %}
-{% set version = "1.0.0b0" %}
+{% set version = "1.0.0" %}
 
 
 package:
@@ -8,10 +8,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/geoschem-gcpy-{{ version }}.tar.gz
-  sha256: c73e06ef73f0aeacc8cc092546c3826096fb5a428648db9ff33cc838f603ded4
+  sha256: 43670c56abdc9e16e6a56b5cc4df42b4cdd8765f9374cc69c16c4a0ab783a491
 
 build:
-  number: 2
+  number: 0
   skip: true  # [win or py<36]
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -52,7 +52,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE.txt
-  summary: 'Python toolkit for working with GEOS-Chem output and input'
+  summary: Python toolkit for working with GEOS-Chem output and input
   doc_url: https://gcpy.readthedocs.io/en/latest/
   dev_url: https://github.com/geoschem/gcpy
 
