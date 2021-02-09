@@ -1,5 +1,5 @@
 {% set name = "geoschem-gcpy" %}
-{% set version = "1.0.0" %}
+{% set version = "1.0.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/geoschem-gcpy-{{ version }}.tar.gz
-  sha256: 43670c56abdc9e16e6a56b5cc4df42b4cdd8765f9374cc69c16c4a0ab783a491
+  sha256: b3bc0eefe6164cec531997a64d69240e7c618a1d9bc260d87131aac6e8a9e916
 
 build:
   number: 0
