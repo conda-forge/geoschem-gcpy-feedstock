@@ -42,7 +42,7 @@ requirements:
     - xarray >=0.15.0
     - xbpch >=0.3.5
     - xesmf >=0.2.1
-    - numba >=0.55.0
+    - numba
 
 test:
   imports:
