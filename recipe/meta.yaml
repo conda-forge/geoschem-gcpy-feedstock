@@ -43,7 +43,7 @@ requirements:
     - xbpch >=0.3.5
     - xesmf >=0.2.1
     - xesmf >=0.2.1
-    - sparselt>=0.1.3
+    - sparselt >=0.1.3
 
 test:
   imports:
