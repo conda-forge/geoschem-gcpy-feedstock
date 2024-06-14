@@ -11,7 +11,7 @@ source:
   sha256: 22d16f2379f8234eae249aaed0494c8924b7fca6415efebcf56d31f3850eb48a
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win or py<36]
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -30,7 +30,6 @@ requirements:
     - joblib >=0.17.0
     - matplotlib-base >=3.1.1
     - netcdf4 >=1.4.2
-    - {{ pin_compatible('numpy') }}
     - pandas >=0.25.1
     - pypdf2 >=1.26.0
     - python
