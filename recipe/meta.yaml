@@ -29,7 +29,7 @@ requirements:
     - cf_xarray
     - dask
     - esmf
-    - esmpy
+    - esmpy <8.4
     - gridspec
     - joblib
     - matplotlib-base
@@ -48,7 +48,7 @@ requirements:
     - tabulate
     - tk
     - xarray
-    - xesmf >=0.8.0
+    - xesmf
 
 test:
   imports:
