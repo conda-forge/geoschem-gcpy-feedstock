@@ -37,9 +37,12 @@ requirements:
     - netcdf-fortran
     - {{ pin_compatible('numpy') }}
     - pandas
+    - pip
+    - pylint
     - pypdf
-    - python
     - pyproj
+    - python
+    - requests
     - scipy
     - sparselt
     - tabulate
