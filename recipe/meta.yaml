@@ -48,7 +48,7 @@ requirements:
     - tabulate
     - tk
     - xarray
-    - xesmf >= 0.8.0
+    - xesmf >=0.8.0
 
 test:
   imports:
