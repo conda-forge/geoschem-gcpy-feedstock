@@ -26,7 +26,7 @@ requirements:
     - dask >=2024.5.2
     - esmf >=8.6.1
     - esmpy >=8.6.1
-    - gridspec==0.1.0
+    - gridspec ==0.1.0
     - h5py >=2.9.0
     - h5netcdf
     - joblib >=1.4.2
