@@ -30,7 +30,6 @@ requirements:
     - h5py >=2.9.0
     - h5netcdf
     - joblib >=1.4.2
-    - matplotlib >=3.8.4
     - matplotlib-base >=3.
     - netcdf4 >=1.6.5
     - {{ pin_compatible('numpy') }}
