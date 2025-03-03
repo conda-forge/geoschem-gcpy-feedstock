@@ -29,7 +29,7 @@ requirements:
     - cf_xarray
     - dask
     - esmf
-    - esmpy <8.4
+    - esmpy
     - gridspec
     - joblib
     - matplotlib-base
