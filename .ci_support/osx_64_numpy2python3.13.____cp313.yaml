@@ -8,6 +8,8 @@ channel_targets:
 - conda-forge main
 macos_machine:
 - x86_64-apple-darwin13.4.0
+netcdf_fortran:
+- '4.6'
 numpy:
 - '2'
 pin_run_as_build:
