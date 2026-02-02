@@ -11,7 +11,7 @@ source:
   sha256: 2d34d09e6e759cb19bd203d2e5af905c310efd227426169ce534d1cbd4debe50
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win or py<36]
   script_env:
     - MPLBACKEND=agg
@@ -24,12 +24,17 @@ requirements:
     - numpy
     - cartopy
     - setuptools
+    # Pin to ESMF 8.8.1 and xesmf 0.8.8 to avoid import errors
+    - esmf =8.8.1
+    - esmpy =8.8.1
+    - xesmf =0.8.8 
   run:
     - cartopy
     - cf_xarray
     - dask
-    - esmf
-    - esmpy
+    # Pin to ESMF 8.8.1 to avoid import errors
+    - esmf =8.8.1
+    - esmpy =8.8.1
     - gridspec
     - joblib
     - matplotlib-base
@@ -48,12 +53,17 @@ requirements:
     - tabulate
     - tk
     - xarray
-    - xesmf
+    # Pin to xesmf 0.8.8 to avoid import errors
+    - xesmf =0.8.8 
 
 test:
   imports:
     - gcpy
-
+  requires:
+    - esmf =8.8.1
+    - esmpy =8.8.1
+    - xesmf =0.8.8
+  
 about:
   home: https://github.com/geoschem/gcpy
   license: MIT
