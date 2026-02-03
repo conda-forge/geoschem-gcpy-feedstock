@@ -11,7 +11,7 @@ source:
   sha256: 2d34d09e6e759cb19bd203d2e5af905c310efd227426169ce534d1cbd4debe50
 
 build:
-  number: 1
+  number: 3
   skip: true  # [win or py<36]
   script_env:
     - MPLBACKEND=agg
