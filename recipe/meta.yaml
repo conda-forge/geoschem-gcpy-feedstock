@@ -1,7 +1,6 @@
 {% set name = "geoschem-gcpy" %}
 {% set version = "1.7.0" %}
 
-
 package:
   name: {{ name|lower }}
   version: {{ version }}
@@ -11,7 +10,7 @@ source:
   sha256: 2d34d09e6e759cb19bd203d2e5af905c310efd227426169ce534d1cbd4debe50
 
 build:
-  number: 5
+  number: 6
   skip: true  # [win or py>=3.14]
   script_env:
     - MPLBACKEND=agg
@@ -19,42 +18,40 @@ build:
 
 requirements:
   host:
-    - pip
     - python
-    - numpy
-    - cartopy
-    - setuptools
-    # Pin to ESMF 8.8.1 and xesmf 0.8.8 to avoid import errors
+    - numpy =2.1.3        # known-good version
+    - cartopy =0.24.0     # known-good version
     - esmf =8.8.1
-    - esmpy =8.8.1
-    - xesmf =0.8.8 
+    - esmpy =8.8.1        # known-good version
+    - xesmf =0.8.8        # known-good version
+    - pip
+    - setuptools
+
   run:
+    - python
     - cartopy
     - cf_xarray
     - dask
-    # Pin to ESMF 8.8.1 to avoid import errors
-    - esmf =8.8.1
-    - esmpy =8.8.1
+    - esmf =8.8.1         # known-good version
+    - esmpy =8.8.1        # known-good version
     - gridspec
     - joblib
     - matplotlib-base
     - netcdf4
     - netcdf-fortran
-    - {{ pin_compatible('numpy') }}
+    - {{ pin_compatible('numpy') }}  # => >=2.1.3,<2.2.0 (keeps you on 2.1.x)
     - pandas
     - pip
     - pylint
     - pypdf
     - pyproj
-    - python
     - requests
     - scipy
     - sparselt
     - tabulate
     - tk
     - xarray
-    # Pin to xesmf 0.8.8 to avoid import errors
-    - xesmf =0.8.8 
+    - xesmf =0.8.8        # known-good version
 
 test:
   imports:
@@ -63,7 +60,7 @@ test:
     - esmf =8.8.1
     - esmpy =8.8.1
     - xesmf =0.8.8
-  
+
 about:
   home: https://github.com/geoschem/gcpy
   license: MIT
