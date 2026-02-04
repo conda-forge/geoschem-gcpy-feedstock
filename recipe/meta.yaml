@@ -21,7 +21,7 @@ requirements:
   host:
     - python
     - pip
-    - numpy 
+    - numpy
     - setuptools
     - cartopy
     # Pin to ESMF 8.8.1 and xesmf 0.8.8 to avoid import errors
