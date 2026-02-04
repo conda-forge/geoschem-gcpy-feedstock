@@ -4,3 +4,23 @@ github:
   tooling_branch_name: main
 conda_build:
   pkg_format: '2'
+
+# Add these lines:
+channels:
+  targets:
+    - [linux-64, osx-64, osx-arm64]  # GCPy doesn't build windows
+
+# NOTE: GCPy doesn't build currently with Python 3.14.* yet,
+# due to esmf/xesmf inconsistencies with this version.
+python:
+  - "3.9"
+  - "3.10"
+  - "3.11"
+  - "3.12"
+  - "3.13"
+
+# Optional but recommended:
+numpy:
+  - "1.23"
+  - "2.0"
+  - "2.1.3"
