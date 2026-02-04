@@ -12,23 +12,24 @@ source:
 
 build:
   number: 0
-  skip: true  # [win or py>=3.14]
+  skip: true  # [win or py>=314]
   script_env:
     - MPLBACKEND=agg
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - pip
     - python
-    - numpy
-    - cartopy
+    - pip
+    - numpy 
     - setuptools
+    - cartopy
     # Pin to ESMF 8.8.1 and xesmf 0.8.8 to avoid import errors
     - esmf =8.8.1
     - esmpy =8.8.1
     - xesmf =0.8.8
   run:
+    - python
     - cartopy
     - cf_xarray
     - dask
@@ -46,7 +47,6 @@ requirements:
     - pylint
     - pypdf
     - pyproj
-    - python
     - requests
     - scipy
     - sparselt
