@@ -1,5 +1,5 @@
 {% set name = "geoschem-gcpy" %}
-{% set version = "1.7.0" %}
+{% set version = "1.7.1" %}
 
 
 package:
@@ -8,10 +8,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 2d34d09e6e759cb19bd203d2e5af905c310efd227426169ce534d1cbd4debe50
+  sha256: 781b66f5f3a16620dc59fd6cff101193439afc9d450b218b13f12e18ccb9ee10
 
 build:
-  number: 5
+  number: 0
   skip: true  # [win or py>=3.14]
   script_env:
     - MPLBACKEND=agg
@@ -27,7 +27,7 @@ requirements:
     # Pin to ESMF 8.8.1 and xesmf 0.8.8 to avoid import errors
     - esmf =8.8.1
     - esmpy =8.8.1
-    - xesmf =0.8.8 
+    - xesmf =0.8.8
   run:
     - cartopy
     - cf_xarray
@@ -54,7 +54,7 @@ requirements:
     - tk
     - xarray
     # Pin to xesmf 0.8.8 to avoid import errors
-    - xesmf =0.8.8 
+    - xesmf =0.8.8
 
 test:
   imports:
@@ -63,7 +63,7 @@ test:
     - esmf =8.8.1
     - esmpy =8.8.1
     - xesmf =0.8.8
-  
+
 about:
   home: https://github.com/geoschem/gcpy
   license: MIT
