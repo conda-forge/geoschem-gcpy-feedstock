@@ -7,11 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
   sha256: 5692a7865c42e2b9d90819b28d2b75ae9f62ac4890df74f4f836d7555fa96889
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
   script_env:
     - MPLBACKEND=agg
